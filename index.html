@@ -14,33 +14,39 @@
 
 </head>
 
-<body>
+<body class="container sticky-top>
 
-  <!-- Instagram -->
+  !-- Instagram -->
   <header class="container sticky-top">
-    <div class="container-fluid">
-      <nav class="navbar bg-body-tertiary">
-        <div class="container-fluid d-flex">
-          <div class="me-auto">
-            <a class="navbar-brand" href="#">
-              <i class="fa-brands fa-instagram"></i>
-              Instagram
-            </a>
-          </div>
+    <nav class="navbar bg-body-tertiary">
+      <div class="container-fluid d-flex">
+        <div class="me-auto">
+          <a class="navbar-brand" href="#">
+            <i class="fa-brands fa-instagram"></i>
+            Instagram
+          </a>
+        </div>
 
-          <!-- Botones derechos -->
-          <!-- <div class="d-flex align-items-center">
-            <button class="btn btn-success me-2">Create new Post</button> -->
+
+
+        <!-- Botones derechos -->
+        <div class="d-flex align-items-center">
+          <!-- Botón "Create a new post" -->
+          <button type="button" class="btn btn-primary me-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Create a new post
+          </button>
+
+          <!-- Ícono de herramienta -->
           <div class="dropdown">
             <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
               aria-expanded="false">
               <i class="fa-solid fa-gear"></i>
             </button>
 
-            <!-- Menu desplegable -->
+            <!-- Menú desplegable -->
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="#">Profile</a></li>
-              <li><a class="dropdown-item" href="#">Accesibility</a></li>
+              <li><a class="dropdown-item" href="#">Accessibility</a></li>
               <li><a class="dropdown-item" href="#">Privacy and data</a></li>
               <li>
                 <hr class="dropdown-divider">
@@ -49,48 +55,54 @@
             </ul>
           </div>
         </div>
-      </nav>
-    </div>
-    <!-- <nav>
-    </nav> -->
+    </nav>
+  </header>
 
 
 
 
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-      Launch demo modal
-    </button>
+  <!-- <div class="d-flex align-items-center"></div>
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Create a new post
+  </button> -->
 
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+  <!-- Modal correción -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Create a new post</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="Caption" class="col-form-label"><strong>Caption:</strong></label>
+              <textarea class="form-control" id="message-text">Add the caption of your post here</textarea>
+            </div>
+          </form>
+          <div class="row p-2">
+            <button class="col-1 border rounded p-1 m-1 btn-light">
+              <i class="fa-solid fa-camera"></i>
+            </button>
+            <button class="col-1 border rounded p-1 m-1 btn-light">
+              <i class="fa-solid fa-location-dot"></i>
+            </button>
           </div>
-          <div class="modal-body">
-            ...
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
-          </div>
+        </div>
+        <!-- Mover el modal-footer aquí, dentro de modal-content -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Publish</button>
         </div>
       </div>
     </div>
+  </div>
 
 
 
-
-
-
-
-
-
-
-    <!-- Modal Body original-->
-    <!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <!-- Modal Body original-->
+  <!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
@@ -117,145 +129,145 @@
       </div>
     </div> -->
 
-    <!-- Iconos del feed -->
-    <div class="container-fluid p-2">
-      <ul class="nav nav-pill justify-content-center" id="myTab" role="tablist">
-        <li class="nav-item" role="presentation">
-          <a class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab"
-            aria-controls="nav home" aria-selected="true"><i class="fa-solid fa-table-cells"></i></a>
+  <!-- Iconos del feed -->
+  <div class="container-fluid p-2">
+    <ul class="nav nav-pill justify-content-center" id="myTab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <a class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab"
+          aria-controls="nav home" aria-selected="true"><i class="fa-solid fa-table-cells"></i></a>
 
-        </li>
-        <li class="nav-item" role="presentation">
-          <a class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab"
-            aria-controls="profile" aria-selected="false"><i class="fa-solid fa-square"></i></a>
-        </li>
-      </ul>
-      <div class="tab-content" id="myTabContent">
+      </li>
+      <li class="nav-item" role="presentation">
+        <a class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab"
+          aria-controls="profile" aria-selected="false"><i class="fa-solid fa-square"></i></a>
+      </li>
+    </ul>
+    <div class="tab-content" id="myTabContent">
 
-        <!--9 fotos feed -->
-        <div class="tab-pane fade show active overflow-hidden" id="home" role="tabpanel" aria-labelledby="home-tab">
-          <div class="row">
-            <!-- imag1 -->
-            <div class="col-4 p-1">
-              <img style="height: 300px; object-fit: cover;"
-                src="https://images.unsplash.com/photo-1724690416953-c787bc34b56f?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                class="w-100" alt="Descripción de la imagen 1">
-            </div>
-            <!-- imag2 -->
-            <div class="col-4 p-1">
-              <img style="height: 300px; object-fit: cover;"
-                src="https://images.unsplash.com/photo-1724863169424-1eb47877f984?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                class="w-100" alt="Descripción de la imagen 2">
-            </div>
-            <!-- imag3 -->
-            <div class="col-4 p-1">
-              <img style="height: 300px; object-fit: cover;"
-                src="https://plus.unsplash.com/premium_photo-1721315652258-d390f957dc20?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                class="w-100" alt="Descripción de la imagen 3">
-            </div>
+      <!--9 fotos feed -->
+      <div class="tab-pane fade show active overflow-hidden" id="home" role="tabpanel" aria-labelledby="home-tab">
+        <div class="row">
+          <!-- imag1 -->
+          <div class="col-4 p-2">
+            <img style="height: 300px; object-fit: cover;"
+              src="https://images.unsplash.com/photo-1724690416953-c787bc34b56f?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              class="w-100" alt="Descripción de la imagen 1">
           </div>
-
-          <div class="row">
-            <!-- imag4 -->
-            <div class="col-4 p-1">
-              <img style="height: 300px; object-fit: cover;"
-                src="https://images.unsplash.com/photo-1724700358152-1fb4dfbc289c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                class="w-100" alt="Descripción de la imagen 4">
-            </div>
-            <!-- imag5 -->
-            <div class="col-4 p-1">
-              <img style="height: 300px; object-fit: cover;"
-                src="https://images.unsplash.com/photo-1724590391555-e4d81815e0af?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                class="w-100" alt="Descripción de la imagen 5">
-            </div>
-            <!-- imag6 -->
-            <div class="col-4 p-1">
-              <img style="height: 300px; object-fit: cover;"
-                src="https://images.unsplash.com/photo-1723844944367-9332e405fd6c?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                class="w-100" alt="Descripción de la imagen 6">
-            </div>
+          <!-- imag2 -->
+          <div class="col-4 p-2">
+            <img style="height: 300px; object-fit: cover;"
+              src="https://images.unsplash.com/photo-1724863169424-1eb47877f984?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              class="w-100" alt="Descripción de la imagen 2">
           </div>
+          <!-- imag3 -->
+          <div class="col-4 p-1">
+            <img style="height: 300px; object-fit: cover;"
+              src="https://plus.unsplash.com/premium_photo-1721315652258-d390f957dc20?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              class="w-100" alt="Descripción de la imagen 3">
+          </div>
+        </div>
 
-          <div class="row">
-            <!-- imag7 -->
-            <div class="col-4 p-1">
-              <img style="height: 300px; object-fit: cover;"
-                src="https://images.unsplash.com/photo-1723920515274-ace3503adad6?q=80&w=2013&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                class="w-100" alt="Descripción de la imagen 7">
+        <div class="row">
+          <!-- imag4 -->
+          <div class="col-4 p-1">
+            <img style="height: 300px; object-fit: cover;"
+              src="https://images.unsplash.com/photo-1724700358152-1fb4dfbc289c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              class="w-100" alt="Descripción de la imagen 4">
+          </div>
+          <!-- imag5 -->
+          <div class="col-4 p-1">
+            <img style="height: 300px; object-fit: cover;"
+              src="https://images.unsplash.com/photo-1724590391555-e4d81815e0af?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              class="w-100" alt="Descripción de la imagen 5">
+          </div>
+          <!-- imag6 -->
+          <div class="col-4 p-1">
+            <img style="height: 300px; object-fit: cover;"
+              src="https://images.unsplash.com/photo-1723844944367-9332e405fd6c?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              class="w-100" alt="Descripción de la imagen 6">
+          </div>
+        </div>
+
+        <div class="row">
+          <!-- imag7 -->
+          <div class="col-4 p-1">
+            <img style="height: 300px; object-fit: cover;"
+              src="https://images.unsplash.com/photo-1723920515274-ace3503adad6?q=80&w=2013&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              class="w-100" alt="Descripción de la imagen 7">
+          </div>
+          <!-- imag8 -->
+          <div class="col-4 p-1">
+            <img style="height: 300px; object-fit: cover;"
+              src="https://images.unsplash.com/photo-1718808968541-7ec23c57ffc3?q=80&w=1780&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              class="w-100" alt="Descripción de la imagen 8">
+          </div>
+          <!-- imag9 -->
+          <div class="col-4 p-1">
+            <img style="height: 300px; object-fit: cover;"
+              src="https://images.unsplash.com/photo-1724252189737-19256b08031a?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              class="w-100" alt="Descripción de la imagen 9">
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Feed vertical -->
+      <div class="tab-pane fade overflow-hidden" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+        <div class="row my-4">
+          <div class="col-6 mx-auto border p-0">
+            <div class="d-flex justify-content-between p-2">
+              <div class="fs-4">My Crazy dog Spark!</div>
+              <small class="text-end">08/26</small>
             </div>
-            <!-- imag8 -->
-            <div class="col-4 p-1">
-              <img style="height: 300px; object-fit: cover;"
-                src="https://images.unsplash.com/photo-1718808968541-7ec23c57ffc3?q=80&w=1780&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                class="w-100" alt="Descripción de la imagen 8">
-            </div>
-            <!-- imag9 -->
-            <div class="col-4 p-1">
-              <img style="height: 300px; object-fit: cover;"
-                src="https://images.unsplash.com/photo-1724252189737-19256b08031a?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                class="w-100" alt="Descripción de la imagen 9">
+            <img style="object-fit: cover;"
+              src="https://plus.unsplash.com/premium_photo-1666878155781-f86514e5808b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              class="img-fluid" alt="My Crazy dog Spark!" />
+            <div class="p-2">
+              <strong>204 Likes</strong>
+              <p>This is an example of a very good photo that you can post on instagram</p>
             </div>
           </div>
         </div>
 
-
-        <!-- Feed vertical -->
-        <div class="tab-pane fade overflow-hidden" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-          <div class="row my-4">
-            <div class="col-6 mx-auto border p-0">
-              <div class="d-flex justify-content-between p-2">
-                <div class="fs-4">My Crazy dog Spark!</div>
-                <small class="text-end">08/26</small>
-              </div>
-              <img style="object-fit: cover;"
-                src="https://plus.unsplash.com/premium_photo-1666878155781-f86514e5808b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                class="img-fluid" alt="My Crazy dog Spark!" />
-              <div class="p-2">
-                <strong>204 Likes</strong>
-                <p>This is an example of a very good photo that you can post on instagram</p>
-              </div>
+        <div class="row my-4">
+          <div class="col-6 mx-auto border p-0">
+            <div class="d-flex justify-content-between p-2">
+              <div class="fs-4">The greatness of Croatia</div>
+              <small class="text-end">04/09</small>
             </div>
-          </div>
-
-          <div class="row my-4">
-            <div class="col-6 mx-auto border p-0">
-              <div class="d-flex justify-content-between p-2">
-                <div class="fs-4">The greatness of Croatia</div>
-                <small class="text-end">04/09</small>
-              </div>
-              <img style="object-fit: cover;"
-                src="https://images.unsplash.com/photo-1507806492161-d769ea8c99f1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                class="img-fluid" alt="The greatness of Croatia" />
-              <div class="p-2">
-                <strong>26985 Likes</strong>
-                <p>This is an example of a very good photo that you can post on instagram</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="row my-4">
-            <div class="col-6 mx-auto border p-0">
-              <div class="d-flex justify-content-between p-2">
-                <div class="fs-4">Amazing GOAL by Cristiano!</div>
-                <small class="text-end">06/10</small>
-              </div>
-              <img style="object-fit: cover;"
-                src="https://images.unsplash.com/photo-1655918059192-f6332e645272?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                class="img-fluid" alt="Amazing GOAL by Cristiano!" />
-              <div class="p-2">
-                <strong>204 Likes</strong>
-                <p>This is an example of a very good photo that you can post on instagram</p>
-              </div>
+            <img style="object-fit: cover;"
+              src="https://images.unsplash.com/photo-1507806492161-d769ea8c99f1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              class="img-fluid" alt="The greatness of Croatia" />
+            <div class="p-2">
+              <strong>26985 Likes</strong>
+              <p>This is an example of a very good photo that you can post on instagram</p>
             </div>
           </div>
         </div>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-          integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-          crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-          integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-          crossorigin="anonymous"></script>
 
+        <div class="row my-4">
+          <div class="col-6 mx-auto border p-0">
+            <div class="d-flex justify-content-between p-2">
+              <div class="fs-4">Amazing GOAL by Cristiano!</div>
+              <small class="text-end">06/10</small>
+            </div>
+            <img style="object-fit: cover;"
+              src="https://images.unsplash.com/photo-1655918059192-f6332e645272?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              class="img-fluid" alt="Amazing GOAL by Cristiano!" />
+            <div class="p-2">
+              <strong>204 Likes</strong>
+              <p>This is an example of a very good photo that you can post on instagram</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
 
 
 </body>
